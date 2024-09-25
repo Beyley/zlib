@@ -34,6 +34,8 @@ pub fn build(b: *std.Build) !void {
     else
         b.addStaticLibrary(options);
 
+    zlib.pie = true;
+
     zlib.linkLibC();
 
     zlib.defineCMacro("_LARGEFILE64_SOURCE", "1");

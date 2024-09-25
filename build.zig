@@ -43,8 +43,6 @@ pub fn build(b: *std.Build) !void {
         zlib.defineCMacro("_CRT_NONSTDC_NO_DEPRECATE", "1");
     }
 
-    zlib.addIncludePath(b.path("."));
-
     zlib.addCSourceFiles(.{
         .files = srcs,
         .flags = &.{},

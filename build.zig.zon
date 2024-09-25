@@ -7,6 +7,7 @@
     .paths = .{
         "build.zig",
         "build.zig.zon",
+        // source files
         "adler32.c",
         "compress.c",
         "crc32.c",
@@ -22,5 +23,18 @@
         "trees.c",
         "uncompr.c",
         "zutil.c",
+        // private headers
+        "crc32.h",
+        "deflate.h",
+        "gzguts.h",
+        "inffast.h",
+        "inffixed.h",
+        "inflate.h",
+        "inftrees.h",
+        "trees.h",
+        "zutil.h",
+        // public headers
+        "zlib.h",
+        "zconf.h",
     },
 }

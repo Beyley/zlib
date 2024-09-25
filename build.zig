@@ -48,5 +48,8 @@ pub fn build(b: *std.Build) !void {
         .flags = &.{},
     });
 
+    zlib.installHeader(b.path("zlib.h"), "zlib.h");
+    zlib.installHeader(b.path("zconf.h"), "zconf.h");
+
     b.installArtifact(zlib);
 }
